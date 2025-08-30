@@ -69,7 +69,7 @@ export default function RegisterPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/*<Header title="Skapa konto" showBackButton />*/}
-      <Header variant="default" logoSrc={'./logo.png'} />
+      <Header variant="default" logoSrc={'/logo.png'} />
       <main className="flex items-center justify-center px-4 py-12">
         <div className="w-full max-w-md">
           <Card>

@@ -177,6 +177,8 @@ const nextConfig = {
   },
 
   // Image configuration
+//  Pausing
+//  domains: ['jek-hb.github.io', '/logo.png'],
   images: {
     ...(process.env.NEXT_PUBLIC_STATIC_BUILD !== 'true' && {
       domains: ['jek-hb.github.io'],

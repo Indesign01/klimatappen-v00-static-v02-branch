@@ -38,7 +38,7 @@ export default function LektionerLayout({
   return (
     <div className="min-h-screen bg-gray-50">
       {/*<Header />*/}
-      <Header variant="default" logoSrc={'./logo.png'} />
+      <Header variant="default" logoSrc={'/logo.png'} />
       <div className="flex">
         <Navigation />
         <main className="flex-1 p-6">

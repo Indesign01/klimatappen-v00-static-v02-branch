@@ -3,7 +3,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui';
 import { useRouter } from 'next/navigation';
 import { ROUTES } from '@/lib/constants';
-
+import Image from 'next/image'
 interface HeaderProps {
   variant?: 'default' | 'minimal';
   logoSrc?: string; // For custom logo image
@@ -30,6 +30,7 @@ export function Header({
   };
 
   // Minimal variant for auth pages and secondary navigation
+//                <img src={logoSrc} alt="Logo" className="w-6 h-6 rounded-sm" />
   if (variant === 'minimal') {
     return (
       <header className="bg-white shadow-sm border-b border-gray-200">
@@ -42,7 +43,13 @@ export function Header({
               title={auth.user ? 'Gå till Dashboard' : 'Gå till startsidan'}
             >
               {logoSrc ? (
-                <img src={logoSrc} alt="Logo" className="w-6 h-6 rounded-sm" />
+                <Image
+                  src={logoSrc}
+                  alt="Logo"
+                  width={48}
+                  height={48}
+                  className="rounded-lg"
+                />
               ) : (
                 <span className="text-white font-bold text-sm">K</span>
               )}
@@ -54,6 +61,7 @@ export function Header({
   }
 
   // Default variant for main application
+//                  <img src={logoSrc} alt="Logo" className="w-15 h-15 rounded-md" />
   return (
     <header className="bg-white shadow-sm border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,7 +75,13 @@ export function Header({
               title={auth.user ? 'Gå till Dashboard' : 'Gå till startsidan'}
             >
               {logoSrc ? (
-                <img src={logoSrc} alt="Logo" className="w-15 h-15 rounded-md" />
+                  <Image
+                    src={logoSrc}
+                    alt="Logo"
+                    width={48}
+                    height={48}
+                    className="rounded-lg"
+                  />
               ) : (
                 <span className="text-white font-bold text-lg">K</span>
               )}
